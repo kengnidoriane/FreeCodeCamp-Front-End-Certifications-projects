@@ -11,6 +11,8 @@ const QuoteBox = () => {
       const response = await axios.get('https://api.quotable.io/random');
       setQuote(response.data.content);
       setAuthor(response.data.author);
+      console.log(response.data);
+      
     } catch (error) {
       console.error('Error fetching quote:', error);
     }
